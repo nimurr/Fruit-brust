@@ -7,11 +7,11 @@
 
  @media screen and (max-width:450px) {
     .meet-team{
-        height: 310vh;
+        height: 270vh;
     }
  }
- @media screen and (max-width:350px) {
+ @media screen and (max-width:380px) {
     .meet-team{
-        height: 280vh;
+        height: 250vh;
     }
  }
