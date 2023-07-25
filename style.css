@@ -1,1 +1,17 @@
- 
+
+ @media screen and (max-width:650px) {
+    .meet-team{
+        height: 380vh;
+    }
+ }
+
+ @media screen and (max-width:450px) {
+    .meet-team{
+        height: 310vh;
+    }
+ }
+ @media screen and (max-width:350px) {
+    .meet-team{
+        height: 280vh;
+    }
+ }
