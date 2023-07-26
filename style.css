@@ -1,17 +1,1 @@
 
- @media screen and (max-width:650px) {
-    .meet-team{
-        height: 380vh;
-    }
- }
-
- @media screen and (max-width:450px) {
-    .meet-team{
-        height: 270vh;
-    }
- }
- @media screen and (max-width:380px) {
-    .meet-team{
-        height: 250vh;
-    }
- }
