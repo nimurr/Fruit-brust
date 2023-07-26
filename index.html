@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <script>
         tailwind.config = {
@@ -44,26 +44,57 @@
 <body>
     <!-------------- header  ------------------->
     <header class="w-10/12 mx-auto my-6 ">
-        <nav class="flex justify-between items-center lg:bg-primary-color rounded-full md:px-8 py-4">
-            <ul class="hidden lg:flex text-white text-sm">
-                <li class="px-4 cursor-pointer">Home</li>
-                <li class="px-4 cursor-pointer">About Us</li>
-                <li class="px-4 cursor-pointer">Shop</li>
-                <li class="px-4 cursor-pointer">All Fruits</li>
-            </ul>
-            <div class="flex items-center cursor-pointer ">
-                <img class="w-10" src="images/logo.png" alt="">
-                <h3 class="text-3xl font-bold ml-2 md:text-white">Fruit Burst</h3>
-            </div>
-            <label class="bg-white px-5 rounded-full hidden lg:inline">
-                <input class="text-sm w-60 p-2 py-3 border-0 outline-none" type="text" placeholder="Search here">
-                <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
-            </label>
-            <div class="lg:hidden">
-                <i class="fa-solid fa-bars text-3xl"></i>
+        <nav class="sm:bg-primary-color rounded-full mt-6 sm:my-6 pr-3 px-4">
+            <div class="navbar">
+                <div class="w-5/12 hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-white text-lg font-medium">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                    </ul>
+                </div>
+                <div class="justify-between navbar-start flex-1 relative">
+                    <a href="#" class="text-3xl sm:text-4xl flex items-center gap-2">
+                        <img class="w-10" src="images/logo.png" alt="" />
+                        <span class="text-black sm:text-white font-semibold">Fruit Burst</span>
+                    </a>
+                    <div class="dropdown">
+                        <label tabindex="0" class="btn btn-ghost lg:hidden text-black sm:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class="absolute right-0 bg-primary-color menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box bg-danger-color w-52 text-white text-lg font-medium">
+                            <li><a>Home</a></li>
+                            <li><a>About Us</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>All Fruits</a></li>
+                            <li>
+                                <div class="flex flex-1">
+                                    <form class="relative w-full ">
+                                        <input class="input w-full rounded-full text-black" type="text" placeholder="Search here" />
+                                        <i class="bx bx-search text-2xl absolute right-3 top-2 cursor-pointer text-black"></i>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navbar-end hidden lg:flex flex-1">
+                    <form class="relative w-full rounded-full">
+                        <input class="input rounded-full w-full " type="text" placeholder="Search here" />
+                        <i class="bx bx-search text-2xl absolute right-3 top-2 cursor-pointe "></i>
+                    </form>
+                </div>
             </div>
         </nav>
-        <!------------- hero carosel ----------------->
+
+<!----------------------- hero carosel ------------------------->
         <div class="my-8 relative">
             <div class="carousel w-full">
 
@@ -215,7 +246,7 @@
                         <div class="card-actions">
                             <!-- Open the modal using ID.showModal() method -->
                             <button class="btn bg-inherit hover:bg-inherit text-[#F85559] border-0" onclick="my_modal_1.showModal()">Buy Now</button>
-                            <dialog id="my_modal_1" class="modal ">
+                            <dialog id="my_modal_1" class="modal lg:modal-middle modal-top">
                                 <form method="dialog" class="modal-box">
                                     <img class="text-center w-3/12 mx-auto" src="images/fruit6.png" alt="">
                                     <h2 class="text-center text-xl font-bold my-3">Apples</h2>
@@ -256,7 +287,7 @@
                         <div class="card-actions">
                             <!-- Open the modal using ID.showModal() method -->
                             <button class="btn bg-inherit hover:bg-inherit text-[#F85559] border-0" onclick="my_modal_2.showModal()">Buy Now</button>
-                            <dialog id="my_modal_2" class="modal ">
+                            <dialog id="my_modal_2" class="modal lg:modal-middle modal-top">
                                 <form method="dialog" class="modal-box">
                                     <img class="text-center w-3/12 mx-auto" src="images/fruit7.png" alt="">
                                     <h2 class="text-center text-xl font-bold my-3">Orange</h2>
@@ -297,7 +328,7 @@
                         <div class="card-actions">
                             <!-- Open the modal using ID.showModal() method -->
                             <button class="btn bg-inherit hover:bg-inherit text-[#F85559] border-0" onclick="my_modal_3.showModal()">Buy Now</button>
-                            <dialog id="my_modal_3" class="modal ">
+                            <dialog id="my_modal_3" class="modal lg:modal-middle modal-top">
                                 <form method="dialog" class="modal-box">
                                     <img class="text-center w-3/12 mx-auto" src="images/fruit8.png" alt="">
                                     <h2 class="text-center text-xl font-bold my-3">Red Dragon   </h2>
@@ -338,7 +369,7 @@
                         <div class="card-actions">
                             <!-- Open the modal using ID.showModal() method -->
                             <button class="btn bg-inherit hover:bg-inherit text-[#F85559] border-0" onclick="my_modal_4.showModal()">Buy Now</button>
-                            <dialog id="my_modal_4" class="modal ">
+                            <dialog id="my_modal_4" class="modal lg:modal-middle modal-top">
                                 <form method="dialog" class="modal-box">
                                     <img class="text-center w-3/12 mx-auto" src="images/fruit9.png" alt="">
                                     <h2 class="text-center text-xl font-bold my-3">Banana</h2>
